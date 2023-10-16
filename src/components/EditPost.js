@@ -2,8 +2,8 @@ import React,{ useState, useEffect } from 'react';
 import { Navigate, useNavigate ,useParams } from 'react-router-dom';
 
 import { useSelector } from "react-redux";
-import UserService from '../services/user.service';
-import EventBus from "../common/EventBus";
+import UserService from 'services/user.service';
+import EventBus from "common/EventBus";
  
 const EditPost = () => {
     const {id}=useParams()

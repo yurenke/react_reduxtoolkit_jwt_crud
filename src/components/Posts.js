@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import {Link, NavLink} from 'react-router-dom';
-import UserService from "../services/user.service";
 import { Navigate } from 'react-router-dom';
 import { useSelector } from "react-redux";
-import EventBus from "../common/EventBus";
+import EventBus from "common/EventBus";
+import UserService from "services/user.service";
   
 export default function ListPosts(){
     const [posts, setPosts] = useState([]);

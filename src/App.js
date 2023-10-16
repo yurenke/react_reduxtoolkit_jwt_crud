@@ -3,25 +3,22 @@ import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
+import "App.css";
 
-import Login from "./components/Login";
-import Register from "./components/Register";
-import Home from "./components/Home";
-import Profile from "./components/Profile";
-import ListPosts from "./components/Posts";
-import ViewPost from "./components/ViewPost";
-import EditPost from "./components/EditPost";
-import CreatePost from "./components/CreatePost";
+import Login from "components/Login";
+import Register from "components/Register";
+import Home from "components/Home";
+import Profile from "components/Profile";
+import ListPosts from "components/Posts";
+import ViewPost from "components/ViewPost";
+import EditPost from "components/EditPost";
+import CreatePost from "components/CreatePost";
 
-import { logout } from "./slices/auth";
+import { logout } from "slices/auth";
 
-import EventBus from "./common/EventBus";
+import EventBus from "common/EventBus";
 
 const App = () => {
-  const [showModeratorBoard, setShowModeratorBoard] = useState(false);
-  const [showAdminBoard, setShowAdminBoard] = useState(false);
-
   const { user: currentUser } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
 
